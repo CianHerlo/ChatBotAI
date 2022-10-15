@@ -13,3 +13,8 @@ from numpy import newaxis
 
 apple_dataset = pd.read_csv('Apple.csv', header=0)
 apple_dataset
+
+yahoo = apple_dataset[apple_dataset['symbol'] == 'YHOO']
+yahoo_stock_prices = yahoo.close.values.astype('float32')
+yahoo_stock_prices = yahoo_stock_prices.reshape(1762, 1)
+yahoo_stock_prices.reshape
