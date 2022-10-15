@@ -11,4 +11,5 @@ from sklearn.preprocessing import MinMaxScaler
 import matplotlib.pyplot as plt
 from numpy import newaxis
 
-
+apple_dataset = pd.read_csv('Apple.csv', header=0)
+apple_dataset
