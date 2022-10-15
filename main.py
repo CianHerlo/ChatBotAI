@@ -18,3 +18,8 @@ yahoo = apple_dataset[apple_dataset['symbol'] == 'YHOO']
 yahoo_stock_prices = yahoo.close.values.astype('float32')
 yahoo_stock_prices = yahoo_stock_prices.reshape(1762, 1)
 yahoo_stock_prices.reshape
+
+plt.plot(yahoo_stock_prices)
+plt.show()
+scaler = MinMaxScaler(feature_range=(0, 1))
+yahoo_stock_prices = scaler.fit_transform(yahoo_stock_prices)
