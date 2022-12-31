@@ -6,3 +6,6 @@ import datetime as dt
 from sklearn.preprocessing import MinMaxScaler
 from keras.layers import Dense, Dropout, LSTM
 from keras.models import Sequential
+
+Apple = 'Apple'
+currency = 'Euro'
