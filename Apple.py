@@ -77,3 +77,11 @@ plt.xlabel('Time')
 plt.ylabel('Price')
 plt.legend(loc='upper left')
 plt.show()
+
+# Predict next Day
+real_data = [model_inputs[len(model_inputs) + 1 - prediction_days:len(model_inputs) + 1, 0]]
+real_data = np.array(real_data)
+real_data_test = np.reshape(real_data, (real_data.shape[0], real_data.shape[1], 1))
+
+prediction = model.predict(real_data)
+prediction = scaler.inverse_transform(prediction)
